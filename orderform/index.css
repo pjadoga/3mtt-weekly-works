@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+.form-group textarea {
+    height: 100px;
+}
+.form-group button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.form-group button:hover {
+    background-color: #45a049;
+}
+.total-cost {
+    font-size: 18px;
+    font-weight: bold;
+}
+.order-bg {
+    background-color:#7aa049;
+    color: white;
+    padding:20px;
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  .flex-item-left {
+    background-color: #f1f1f1;
+    padding: 10px;
+    flex: 20%;
+  }
+  
+  .flex-item-right {
+    background-color: dodgerblue;
+    padding: 10px;
+    flex: 70%;
+  }
+  
+  /* Responsive layout - makes a one column-layout instead of a two-column layout */
+  @media (max-width: 800px) {
+    .flex-item-right, .flex-item-left {
+      flex: 100%;
+    }
+  }
+ul li{
+    display: inline-block;
+    justify-content: space-between;
+    
+
+}
+
+li{
+    list-style: none;
+    grid-row: auto;
+    cursor: pointer;
+}
+li:hover{
+    color: #45a049;
+    text-decoration: double;
+
+}

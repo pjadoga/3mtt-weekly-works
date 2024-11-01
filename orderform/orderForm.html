@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junik Cosmetics Order Form</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header class ="flex-container">
+        <div class="flex-item-left">
+            <a href="http://">JC</a><hr>
+            <small>..The platform you can trust</small>
+        </div>
+        <div class="flex-item-right">
+            <ul>
+                <li>Home</li>
+                <li>Order</li>
+                <li>About</li>
+                <li>Contact</li>
+                <li>New</li>
+            </ul>
+        </div>
+    </header>
+
+<div class="form-container">
+    <h2>Junik Cosmetics Order Form</h2>
+    <div class="form-group">
+        <label for="size">Select Perfume Size:</label>
+        <select id="size">
+            <option value="3ml">3ml</option>
+            <option value="6ml">6ml</option>
+            <option value="10ml">10ml</option>
+            <option value="12ml">12ml</option>
+            <option value="30ml">30ml</option>
+            <option value="50ml">50ml</option>
+            <option value="100ml">100ml</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" min="1" value="1">
+    </div>
+    <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea id="description" placeholder="Enter a brief description"></textarea>
+    </div>
+    <div class="form-group">
+        <button onclick="addItem()">Add to Order</button>
+    </div>
+
+    <h3>Order Summary</h3>
+    <div class="order-bg">
+        <div id="order-summary"></div>
+    </div>
+    <div class="total-cost" id="total-cost">Total Cost: 0.00NGN</div>
+    <div class="form-group">
+        <button onclick="checkout()">Checkout</button>
+    </div>
+</div>
+
+</body>
+</html>
