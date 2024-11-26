@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Features</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html" selected>Contact</a></li>
+        </ul>
+    </header>
+    <h1>Contact Us</h1>
+    <form id="contactForm">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="formData"></div>
+
+    <script>
+         document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Get the form data
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        console.log(name);
+        console.log(email);
+
+        // Display the form data on the webpage
+        var formDataDiv = document.getElementById('formData');
+        formDataDiv.innerHTML = '<h2>Form Data</h2>';
+        formDataDiv.innerHTML += '<p><strong>Name:</strong> ' + name + '</p>';
+        formDataDiv.innerHTML += '<p><strong>Email:</strong> ' + email + '</p>';
+
+        // Clear the form fields
+        document.getElementById('contactForm').reset();
+    });
+    </script>
+</body>
+</html>

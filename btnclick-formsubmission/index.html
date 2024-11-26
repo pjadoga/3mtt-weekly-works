@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Features</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="index.html" selected>Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+    <h1>Welcome to Junik Multi Concept</h1>
+    <button id="revealButton" onclick = >Click to reveal a message</button>
+    <p id="hiddenMessage" class="hidden">Hello! Thank you for visiting our website.</p>
+
+    <script >
+         document.getElementById('revealButton').addEventListener('click', function() {
+        var message = document.getElementById('hiddenMessage');
+        if (message.classList.contains('hidden')) {
+            message.classList.remove('hidden');
+            this.textContent = 'Click to hide the message';
+        } else {
+            message.classList.add('hidden');
+            this.textContent = 'Click to reveal a message';
+        }
+    });
+    </script>
+</body>
+</html>
